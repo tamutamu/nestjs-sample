@@ -1,6 +1,13 @@
-## Installation
+## Getting Started
+
+### 開発サーバを起動するまでの手順
 
 ```bash
+$ git clone [URL]
+
+$ cd [repo name]
+
+# 依存モジュール追加
 $ npm i
 
 # 開発用ミドル起動
@@ -9,9 +16,21 @@ $ docker-compose up -d
 # DBにモデル定義反映
 $ npx prisma migrate dev
 
-# モデル定義からClientコード生成
-$ npx prisma generate
+# 開発モードでサーバ起動
+$ npm run start:dev
 ```
+
+### 動作確認の手順
+
+1. 開発サーバを起動しておく
+1. VsCodeで開く
+1. ワークスペース推奨拡張をインストール
+1. VsCode上で [test.rest](./test.rest) を開く
+1. `// ユーザ登録`の下の `Send Request` を押すとサーバにリクエストが飛ぶ
+1. データを確認する
+   ```bash
+   $ npx prisma studio
+   ```
 
 ## Running the app
 
