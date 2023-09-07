@@ -3,6 +3,9 @@
 ```bash
 $ npm i
 
+# 開発用ミドル起動
+$ docker-compose up -d
+
 # DBにモデル定義反映
 $ npx prisma migrate dev
 
