@@ -1,0 +1,9 @@
+// ユーザ登録
+POST http://localhost:3000/auth/signup
+content-type: application/json
+Accept: application/json
+
+{
+    "name": "example1",
+    "email": "test1@example.com"
+}
