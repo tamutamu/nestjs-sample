@@ -1,3 +1,5 @@
+## Requirements
+
 ## Getting Started
 
 ### 開発サーバを起動するまでの手順
@@ -77,3 +79,9 @@ $ docker-compose down -v
 ### テーブル定義の変更
 
 TODO
+
+## 開発ルール
+
+### URL設計
+
+- https://zenn.dev/yu1ro/articles/4c73274383b676
