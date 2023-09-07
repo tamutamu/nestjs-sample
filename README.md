@@ -49,7 +49,11 @@ nest g controller [リソース名(複数形)]
 nest g service [リソース名(複数形)]
 ```
 
-TODO
+### DBのドロップ
+
+```bash
+$ docker-compose down -v
+```
 
 ### テーブル定義の変更
 
