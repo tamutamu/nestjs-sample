@@ -10,7 +10,7 @@ import { Article } from '@prisma/client';
 import { CommentsService } from 'src/comments/comments.service';
 import { CreateCommentDto } from 'src/comments/dto/create.comments.dto';
 import { ArticlesService } from './articles.service';
-import { CreateArticleDto } from './dto/article.dto';
+import { CreateArticleCommentDto, CreateArticleDto } from './dto/article.dto';
 
 @Controller('articles')
 export class ArticlesController {
@@ -37,9 +37,9 @@ export class ArticlesController {
   @Post(':id/comments')
   createComment(
     @Param('id', ParseIntPipe) id: number,
-    @Body() dto: CreateCommentDto,
+    @Body() dto: CreateArticleCommentDto,
   ): Promise<Article> {
-    dto.articleId = id;
-    return this.commentService.createComment(dto);
+    const commentDto = new CreateCommentDto({ articleId: id, ...dto });
+    return this.commentService.createComment(commentDto);
   }
 }
