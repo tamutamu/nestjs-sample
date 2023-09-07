@@ -1,16 +1,10 @@
 import {
-  Controller,
-  Post,
   Body,
-  HttpCode,
-  HttpStatus,
-  Res,
-  Req,
-  Get,
-  Header,
+  Controller,
+  Post
 } from '@nestjs/common';
-import { AuthDto } from './dto/auth.dto';
 import { AuthService } from './auth.service';
+import { AuthDto } from './dto/auth.dto';
 import { Msg } from './interfaces/auto.interfaces';
 
 @Controller('auth')

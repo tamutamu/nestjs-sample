@@ -4,6 +4,18 @@ content-type: application/json
 Accept: application/json
 
 {
-    "name": "example1",
-    "email": "test1@example.com"
+"name": "example1",
+"email": "test1@example.com"
 }
+###
+
+// コメント登録
+POST http://localhost:3000/comment
+content-type: application/json
+Accept: application/json
+
+{
+    "content": "コメント１",
+    "userId": 1
+}
+###
