@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { User } from '@prisma/client';
 import { PrismaService } from 'src/prisma/prisma.service';
 
@@ -6,14 +6,17 @@ import { PrismaService } from 'src/prisma/prisma.service';
 export class UserService {
   constructor(private prisma: PrismaService) {}
 
-  getUsers(userId: number): Promise<User[]> {
-    return this.prisma.user.findMany({
+  async getUser(userId: number): Promise<User> {
+    const user = await this.prisma.user.findFirst({
       where: {
         id: userId,
       },
-      orderBy: {
-        createdAt: 'desc',
-      },
     });
+
+    if (!user) {
+      throw new NotFoundException('見つかりません');
+    }
+
+    return user;
   }
 }

@@ -19,3 +19,10 @@ Accept: application/json
     "userId": 1
 }
 ###
+
+// ユーザデータのみ取得
+GET http://localhost:3000/user/1
+content-type: application/json
+Accept: application/json
+
+###
