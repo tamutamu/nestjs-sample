@@ -39,8 +39,9 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## APIエンドポイントの追加
+## 開発ルーティン
+### APIエンドポイントの追加
 TODO
 
-## テーブル定義の変更
+### テーブル定義の変更
 TODO
