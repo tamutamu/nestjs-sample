@@ -40,8 +40,17 @@ $ npm run test:cov
 ```
 
 ## 開発ルーティン
+
 ### APIエンドポイントの追加
+
+```bash
+nest g module [リソース名(複数形)]
+nest g controller [リソース名(複数形)]
+nest g service [リソース名(複数形)]
+```
+
 TODO
 
 ### テーブル定義の変更
+
 TODO

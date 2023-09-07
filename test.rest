@@ -1,5 +1,5 @@
 // ユーザ登録
-POST http://localhost:3000/auth/signup
+POST http://localhost:3000/auths/signup/
 content-type: application/json
 Accept: application/json
 
@@ -9,8 +9,19 @@ Accept: application/json
 }
 ###
 
+// 記事の登録
+POST http://localhost:3000/articles/
+content-type: application/json
+Accept: application/json
+
+{
+    "content": "記事１",
+    "userId": 1
+}
+###
+
 // コメント登録
-POST http://localhost:3000/comment
+POST http://localhost:3000/articles/1/comments/
 content-type: application/json
 Accept: application/json
 
@@ -20,8 +31,8 @@ Accept: application/json
 }
 ###
 
-// ユーザデータのみ取得
-GET http://localhost:3000/user/1
+// 記事のみ取得
+GET http://localhost:3000/articles/1/
 content-type: application/json
 Accept: application/json
 
